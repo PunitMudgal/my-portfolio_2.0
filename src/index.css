@@ -11,6 +11,7 @@ font-family: 'Ysabeau', sans-seri */
 
   --color-orange: #f49867;
   --color-dark: #000000;
+  --color-darkBlue: #011022;
   --color-medium: #150050;
   --color-light: #3F0071;
   --color-extraLight: #610094;
@@ -27,6 +28,14 @@ font-family: 'Ysabeau', sans-seri */
 
 .bg-gradient-color-Light{
   background:linear-gradient(148deg, rgba(59, 172, 182, 1) 0%, rgba(130, 219, 216, 1) 51%, rgba(59, 172, 182, 1) 100%);
+}
+
+.underline{
+  height: 5px;
+  width: 9rem;
+  background-color: var(--color-orange);
+  border-radius: 7px;
+  align-self: center;
 }
 
 *{
@@ -50,7 +59,7 @@ li{
 }
 
 .section-padding{
-  padding: 5rem 3rem;
+  padding:2rem 3rem;
 }
 .section-margin{
   margin: 5rem 3rem;

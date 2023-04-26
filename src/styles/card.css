@@ -1,0 +1,19 @@
+.card{
+    height: 7rem;
+    padding: 8px;
+    background-color: var(--color-footer);
+    max-width: fit-content;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.card :hover{
+    transform: scale(1.1);
+    transition: all ease-in-out;
+    /* todo  */
+}
+
+.card img{
+    height: 100%;
+    object-fit: cover;
+}
