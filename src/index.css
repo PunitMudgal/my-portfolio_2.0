@@ -1,13 +1,87 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@100;200;300;500;600;800&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@100;200;300;500;600;800&family=Ysabeau:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
+
+/* font-family: 'Pathway Extreme', sans-serif;
+font-family: 'Ysabeau', sans-seri */
+
+:root{
+  --font-pri: 'Pathway Extreme', sans-serif;
+  --font-sec: 'Ysabeau', sans-seri;
+  --font-extra:  'Merriweather Sans', sans-serif;
+
+  --color-orange: #f49867;
+  --color-dark: #000000;
+  --color-medium: #150050;
+  --color-light: #3F0071;
+  --color-extraLight: #610094;
+  --color-footer: #0A2647;
+  
+  --gradient-cyan: linear-gradient(to right, #2F8F9D 5%, #82DBD8 54%);
+  --gradient-darkCyan: linear-gradient(117deg, rgba(47, 143, 157, 1) 0%, rgba(59, 172, 182, 1) 49%, rgba(47, 143, 157, 1) 100%);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-gradient-color{
+  background:linear-gradient(117deg, rgba(47, 143, 157, 1) 0%, rgba(59, 172, 182, 1) 49%, rgba(47, 143, 157, 1) 100%);
+}
+
+.bg-gradient-color-Light{
+  background:linear-gradient(148deg, rgba(59, 172, 182, 1) 0%, rgba(130, 219, 216, 1) 51%, rgba(59, 172, 182, 1) 100%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+a{
+  text-decoration: none;
+  list-style: none;
+  color: unset;
+}
+
+li{
+  list-style: none;
+  text-decoration: unset;
+  color: unset;
+}
+
+.section-padding{
+  padding: 5rem 3rem;
+}
+.section-margin{
+  margin: 5rem 3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .section-padding{
+      padding: 4rem 2rem;
+  }
+  .section-margin{
+      margin: 4rem 2rem;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .section-padding{
+      padding: 3rem 1.5rem;
+  }
+  .section-margin{
+      margin: 3rem 1.5rem;
+  }
+}
+
+.box-shadow{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.box-shadow2{
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.box-shadow3{
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
