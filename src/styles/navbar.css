@@ -1,8 +1,10 @@
 .navbar {
-  display: grid;
-  align-items: center;
+  position:absolute;
+  top: 0;
+  background-color: transparent;
+
   padding: 2.6rem;
-  background-color: #1a1919;
+  width: 100%;
   /* color: var(--color-extraLight); */
   color: white;
   font-family: var(--font-pri);
