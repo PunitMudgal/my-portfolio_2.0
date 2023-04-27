@@ -23,7 +23,7 @@ function Navbar() {
         <FaGripVertical onClick={() => setNavbar(true)} size={23} />
 
         {navbar ? (
-            <div className="navbar-content-mob">
+            <div className="navbar-content-mob fade-in-right">
               <VscChromeClose className="navbar-close-btn" onClick={() => setNavbar(false)} size={35} />
             <div className="navbar-content-list-mob">
               <a href="#home">HOME</a>

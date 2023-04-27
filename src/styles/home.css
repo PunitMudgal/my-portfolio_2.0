@@ -14,13 +14,13 @@
     top: 35%;
     left: 25%;
     display: flex;
-    /* justify-content: flex-start; */
     flex-direction: column;
     color: white;
     font-family: var(--font-extra);
 }
 
 .home-content h5{
+    margin-left: 3px;
     font-size: 18px;
     color: #008080e4;
 }
@@ -29,7 +29,6 @@
     font-size: 6rem;
     line-height: 70px;
     font-family: var(--font-pri);
-    /* color: var(--color-extraLight); */
     color:aqua;
     margin-bottom: 2rem;
 }
@@ -60,6 +59,15 @@
 
 
 @media screen and (max-width:800px){
+    .home{
+        height: 90vh;
+    }
+
+    .home-content{
+        top: 30%;
+        left: 12%;
+    }
+
     .home-content h5{
         font-size: 13px;
     }

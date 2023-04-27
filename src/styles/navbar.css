@@ -2,10 +2,8 @@
   position:absolute;
   top: 0;
   background-color: transparent;
-
   padding: 2.6rem;
   width: 100%;
-  /* color: var(--color-extraLight); */
   color: white;
   font-family: var(--font-pri);
 }
@@ -24,10 +22,9 @@
 .navbar-content-list-pc{
     display: flex;
     gap: 2rem;
-    
     font-weight: 200;
-
 }
+
 .navbar-content-list-pc :hover{
     color: var(--color-extraLight);
 }
@@ -45,8 +42,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    background-color: var(--color-dark);
+    height: 100vh;
+    background-color: var(--color-footer);
+    z-index: 10;
 }
 
 .navbar-close-btn{
@@ -58,10 +56,16 @@
 .navbar-content-list-mob{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 4rem;
 }
 
 @media screen and (max-width:800px){
+
+  .navbar{
+    padding: 2rem;
+  }
     .navbar-content-list-pc{
         display: none;
     }
