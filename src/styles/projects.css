@@ -1,0 +1,36 @@
+.project{
+    /* height: 100vh; */
+    width: 100%;
+    background-color: var(--color-darkBlue);
+    color: white;
+    font-family: var(--font-sec);
+}
+
+.project-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-page h1{
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-family: var(--font-pri);
+    text-align: center;
+}
+.project-page p{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: rgb(0, 166, 166);
+    text-transform: capitalize;
+}
+
+.project-page-content{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}

@@ -1,0 +1,42 @@
+.single-project{
+    height: 30rem;
+    position: relative;
+    max-width: fit-content;
+    cursor: pointer;
+}
+
+.single-project img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-project-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4%;
+    left:3.9%;    
+    gap: 8px;
+    height: 92%;
+    width: 92.1%;
+    background-color: #00000099;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.single-project-details:hover{
+    opacity: 0.9;
+}
+
+.single-project-details a{
+    padding: 0.8rem;
+    font-family: var(--font-sec);
+    border-radius: 5px;
+    background-color:orange;
+    font-weight: 800;
+    color: black;
+    max-width: max-content;
+    max-height: max-content;
+}

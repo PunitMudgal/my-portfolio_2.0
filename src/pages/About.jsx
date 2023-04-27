@@ -21,7 +21,7 @@ export default function About() {
   ];
 
   return (
-    <div className="about section-padding">
+    <div id="about" className="about section-padding">
       <div className="about-content">
         <div className="about-heading">
           <h1>ABOUT ME</h1>

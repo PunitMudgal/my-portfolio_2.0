@@ -12,10 +12,10 @@ function Navbar() {
         <a className="navbar-logo" href="/">PUNIT SHARMA</a>
 
         <div className="navbar-content-list-pc">
-          <a href="/">HOME</a>
-          <a href="/">ABOUT</a>
-          <a href="/">PROJECTS</a>
-          <a href="/">CONTACT</a>
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#project">PROJECTS</a>
+          <a href="#contact">CONTACT</a>
         </div>
 
         {/* for mobile */}
@@ -26,10 +26,10 @@ function Navbar() {
             <div className="navbar-content-mob">
               <VscChromeClose className="navbar-close-btn" onClick={() => setNavbar(false)} size={35} />
             <div className="navbar-content-list-mob">
-              <a href="/">HOME</a>
-              <a href="/">ABOUT</a>
-              <a href="/">PROJECTS</a>
-              <a href="/">CONTACT</a>
+              <a href="#home">HOME</a>
+              <a href="#about">ABOUT</a>
+              <a href="#project">PROJECTS</a>
+              <a href="#contact">CONTACT</a>
             </div>
           </div>
         ) : (

@@ -57,3 +57,28 @@
     font-family: var(--font-extra);
     border-radius: 4px;
 }
+
+
+@media screen and (max-width:800px){
+    .home-content h5{
+        font-size: 13px;
+    }
+    
+    .home-content h1{
+        font-size: 3rem;
+        line-height: 50px;
+        margin-bottom: 1rem;
+    }
+    
+    .home-content p{
+        font-size: 15px;
+        max-width:unset;
+        letter-spacing:normal;
+        line-height: 24px;
+        font-weight: 500;
+    } 
+
+    .home-content a{
+        padding: 0.7rem;
+    }
+}

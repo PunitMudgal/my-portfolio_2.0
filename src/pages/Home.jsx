@@ -6,7 +6,7 @@ import lightblue from '../assets/light-blue.jpg';
 
 export default function Home() {
   return (
-    <div className='home'>
+    <div id='home' className='home'>
         <img src={darkblue} alt="bg" />
         <div className='home-content'>
             <h5>HEY, I AM</h5>
