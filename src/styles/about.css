@@ -69,5 +69,34 @@
 }
 
 @media screen and (max-width:800px){
+    .about-heading h1{
+        font-size: 1.7rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    .about-heading p{
+        margin-top: 1rem;
+        font-size: 1.1rem;
+    }
 
+    .about-sections{
+        flex-direction: column;
+        gap: 1.4rem;
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    .about-sections h3{
+        font-size: 1.2;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-left-section p{
+        font-size: 1rem;
+    }
+
+    .about-right-section-cards{
+        justify-content: center;
+        gap: 5px;
+    }
 }

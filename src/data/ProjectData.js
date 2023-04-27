@@ -1,11 +1,11 @@
 import netflix from "../assets/netflix.png";
 import hooBank from "../assets/hoobank.png";
 import gpt from "../assets/chatgpt.png";
-import tiktaktoe from "../assets/tiktak.png";
-import translator from "../assets/translator.png";
+// import tiktaktoe from "../assets/tiktak.png";
+// import translator from "../assets/translator.png";
 import textUtils from "../assets/textUtils.png";
-import notes from "../assets/notesApp.png";
-import bmi from "../assets/bmi.png";
+// import notes from "../assets/notesApp.png";
+// import bmi from "../assets/bmi.png";
 
 export const ProjectData = [
   {

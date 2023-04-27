@@ -40,3 +40,18 @@
     max-width: max-content;
     max-height: max-content;
 }
+
+@media screen and (max-width:800px){
+    .single-project{
+        height: 15rem;
+    }
+   
+.single-project-details a{
+    padding: 0.4rem;
+    font-weight: 600;
+    color: black;
+    max-width: max-content;
+    max-height: max-content;
+}
+
+}
