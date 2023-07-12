@@ -41,7 +41,8 @@ export default function About() {
             </p>{" "}
             <br />
             <p>
-             My firebase skills are basics, You can check out my work. All the projects which i build are in react.
+              My firebase skills are basics, You can check out my work. All the
+              projects which i build are in react.
             </p>{" "}
             <br />
             <p>
@@ -53,9 +54,9 @@ export default function About() {
           <div className="about-right-section">
             <h3>My Skills</h3>
             <div className="about-right-section-cards">
-            {skills.map((cards) => (
-              <Card key={cards.id} image={cards.image} />
-            ))}
+              {skills.map((cards) => (
+                <Card key={cards.id} image={cards.image} />
+              ))}
             </div>
           </div>
         </div>
