@@ -1,7 +1,7 @@
 .home {
   width: 100%;
   height: 100vh;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .home-image {
@@ -63,7 +63,7 @@
     height: 90vh;
   }
 
-  .home-image{
+  .home-image {
     height: 90vh;
   }
 

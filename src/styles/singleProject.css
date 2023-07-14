@@ -1,14 +1,18 @@
 .single-project {
-  height: 30rem;
+  /* height: 30rem; */
+  height: 100%;
+  width: 100%;
   position: relative;
   max-width: fit-content;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .single-project-image {
-  /* height: 100%; */
-  height: 30rem;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .single-project-details {
@@ -17,14 +21,15 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+  border-radius: 6px;
   top: 4%;
   left: 3.9%;
   gap: 8px;
-  height: 92%;
-  width: 92.1%;
+  height: 91%;
+  width: 93%;
   background-color: #00000099;
-  opacity: 0;
   overflow: hidden;
+  opacity: 0;
 }
 
 .single-project-details:hover {
@@ -37,20 +42,12 @@
   border-radius: 5px;
   background-color: orange;
   font-weight: 800;
-  color: black;
+  color: white;
   max-width: max-content;
   max-height: max-content;
 }
 
 @media screen and (max-width: 800px) {
-  .single-project {
-    height: 15rem;
-  }
-
-  .single-project-image {
-    height: 40vh;
-  }
-
   .single-project-details a {
     padding: 0.4rem;
     font-weight: 600;
