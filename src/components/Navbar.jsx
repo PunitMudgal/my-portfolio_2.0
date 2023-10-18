@@ -1,44 +1,107 @@
-import React, { useState } from "react";
-import "../styles/navbar.css";
-// import { Link } from "react-router-dom";
-import { FaGripVertical } from "react-icons/fa";
-import { VscChromeClose } from "react-icons/vsc";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-function Navbar() {
-  const [navbar, setNavbar] = useState(false);
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+// import { logo, menu, close } from "../assets";
+import { CgMenuRight, CgMenuMotion } from "react-icons/cg";
+// import logo from "../assets/logo.webp";
+
+const Navbar = () => {
+  const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="navbar">
-      <div className="navbar-content">
-        <a className="navbar-logo" href="/">PUNIT SHARMA</a>
+    <nav
+      className={`${
+        styles.paddingX
+      } w-full flex items-center py-5 fixed top-0 z-20 ${
+        scrolled ? "bg-primary" : "bg-transparent"
+      }`}
+    >
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        <Link
+          to="/"
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          {/* <img src={logo} alt="logo" className="w-9 h-9 object-contain" /> */}
+          <Link
+            to="/"
+            className="text-white text-xl font-semibold cursor-pointer flex font-heading"
+          >
+            Punit &nbsp;
+            <span className="block md:hidden">Sharma</span>
+          </Link>
+        </Link>
 
-        <div className="navbar-content-list-pc">
-          <a href="#home">HOME</a>
-          <a href="#about">ABOUT</a>
-          <a href="#project">PROJECTS</a>
-          <a href="#contact">CONTACT</a>
-        </div>
+        <ul className="list-none md:hidden flex flex-row gap-10">
+          {navLinks.map((nav) => (
+            <li
+              key={nav.id}
+              className={`${
+                active === nav.title ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive(nav.title)}
+            >
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            </li>
+          ))}
+        </ul>
 
-        {/* for mobile */}
-        <div className="navbar-mob">
-        <FaGripVertical onClick={() => setNavbar(true)} size={23} />
+        <div className="hidden md:flex flex-1 justify-end items-center">
+          <span
+            className="w-[28px] h-[28px] object-contain"
+            onClick={() => setToggle(!toggle)}
+          >
+            {toggle ? <CgMenuMotion /> : <CgMenuRight />}
+          </span>
 
-        {navbar ? (
-            <div className="navbar-content-mob fade-in-right">
-              <VscChromeClose className="navbar-close-btn" onClick={() => setNavbar(false)} size={35} />
-            <div className="navbar-content-list-mob">
-              <a href="#home">HOME</a>
-              <a href="#about">ABOUT</a>
-              <a href="#project">PROJECTS</a>
-              <a href="#contact">CONTACT</a>
-            </div>
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+              {navLinks.map((nav) => (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === nav.title ? "text-white" : "text-secondary"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(nav.title);
+                  }}
+                >
+                  <a href={`#${nav.id}`}>{nav.title}</a>
+                </li>
+              ))}
+            </ul>
           </div>
-        ) : (
-         null
-        )}
         </div>
       </div>
-   </div>
+    </nav>
   );
-}
+};
 
 export default Navbar;

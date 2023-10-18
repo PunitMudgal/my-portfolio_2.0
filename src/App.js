@@ -1,27 +1,33 @@
-import { Suspense, lazy } from 'react';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-// import About from './pages/About';
-// import Contact from './pages/Contact';
-// import Home from './pages/Home';
-// import Projects from './pages/Projects';
-const Home = lazy(() => import("./pages/Home"))
-const About = lazy(() => import("./pages/About"))
-const Contact = lazy(() => import("./pages/Contact"))
-const Projects = lazy(() => import("./pages/Projects"))
+import "./index.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Tech from "./components/Tech";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+
+import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
-
-  return <div>
-    <Navbar />
-    <Suspense fallback={<div>Loading...</div>}>
-    <Home />
-    <About />
-    <Projects />
-    <Contact />
-    </Suspense>
-    <Footer />
-  </div>;
+  return (
+    <BrowserRouter>
+      <div className="relative z-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Tech />
+        <Projects />
+        <div className="relative z-0">
+          <Contact />
+          {/* <StarsCanvas /> */}
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;

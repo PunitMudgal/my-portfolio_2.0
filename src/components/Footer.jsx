@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/footer.css";
+import "../footer.css";
 import { FaInstagram, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 
 function Footer() {
@@ -7,10 +7,10 @@ function Footer() {
     <div className="footer">
       <div className="footer-content">
         <div className="footer-content-heading">
-          <h4>PUINT SHARMA</h4>
+          <h4>Punit Sharma</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-            autem, cumque impedit ex labore sit obcaecati{" "}
+            A Passonate full stack developer who has hunger to learn to new
+            things
           </p>
         </div>
         <div className="footer-content-icons">
